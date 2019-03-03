@@ -26,7 +26,8 @@ end
 def void_last_transaction
   self.total -= self.last_transaction[1] * self.last_transaction[2]
     self.last_transaction[2].times do
-      self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count)
+      self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count).
+    end 
 end 
 
 =begin def add_item(title, price, quantity = 1)
