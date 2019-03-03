@@ -19,7 +19,7 @@ class CashRegister
   end
 end 
 
-def items 
+=begin def items 
   self.items << title 
 end 
 
@@ -29,8 +29,8 @@ def void_last_transaction
       self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count).
     end 
 end 
-
-=begin def add_item(title, price, quantity = 1)
+=end 
+ def add_item(title, price, quantity = 1)
     self.total += price * quantity
     quantity.times { self.items << title }
     self.last_transaction = [title, price, quantity]
@@ -41,4 +41,4 @@ end
     self.last_transaction[2].times do
       self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count)
     end
-    =end 
+    
