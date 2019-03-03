@@ -1,6 +1,6 @@
 require "pry"
 
-class CashRegister
+=begin class CashRegister
   attr_accessor :total, :discount, :items
   
   def initialize(discount=nil)
@@ -29,7 +29,7 @@ end
       self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count).
     end 
 end 
-=end 
+
  def add_item(title, price, quantity = 1)
     self.total += price * quantity
     quantity.times { self.items << title }
@@ -42,4 +42,5 @@ end
       self.items.delete_at(self.items.index(self.last_transaction[0]) || self.items.count)
     end
   end 
+    =end 
     
